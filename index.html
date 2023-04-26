@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sketch</title>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script src="p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
+  <script src="libraries/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  
+</head>
+
+<body>
+
+  <h1 id="header" class="typing-title">Visualizing the International Trade of Worn Textiles</h1>
+
+  <br>
+  <br>
+
+  <div class="container">
+
+    <div class="dropdown">
+      <h4>Filter:</h4>
+      <label for="dropdownImport" id="label">Select an Importing Country</label>
+      <select id="dropdownImport" class="my-select" onchange="updateDropdownImport()"
+        onchange="onExportCountryChange()">
+        <option></option>
+      </select>
+      <label id="or">OR</label>
+      <br>
+      <br>
+      <label for="dropdownExport" id="label">Select an Exporting Country</label>
+      <select id="dropdownExport" class="my-select" onchange="updateDropdownExport()"
+        onchange="onImportCountryChange()">
+        <option></option>
+      </select>
+    </div>
+
+    <div class="resetButton">
+      <button id="reset-filter" onclick="reset()">Reset Filter</button>
+    </div>
+
+    <div class="aboutButton">
+      <button id="go-to-about" onclick="">About the Project</button>
+    </div>
+
+  </div>
+
+  <br>
+  <br>
+  <label id="key" class="head">Value per Kilogram:</label>
+  <label id="key">Low</label>
+  <img src="Asset 1.svg" alt="Value per Kilo">
+  <label id="key">High</label>
+
+  <div id="canvas-container"></div>
+
+  <div id="subhead">
+
+    <h2 id="about-head">About the project</h2>
+
+    <div id="about">
+      <p>There is currently very limited publicly available data on the fashion industry.
+        In particular,post-consumer waste in the fashion industry at a large scale is incredibly difficult to track
+        through data.
+        Monitoring trade flows of worn textiles helps us begin to get an idea of
+        how many post-consumer textiles are floating around in the world -- and
+        which countries the majority of these used clothing and fabric items end up in.
+        Data on trade is public information, and not privately owned data in, for example,
+        the hands of a single clothing brand.
+        <br>
+        <br>
+        Although trade data does not allow us to track what happens to the textiles after they
+        are traded, based on the literature, we do know a few likely fates for worn textiles:
+      </p>
+
+      <ul>
+
+        <li>They are sold cheaply in secondhand markets. Often, what does not get sold in
+          the goodwills of wealthier countries eventually ends up in the marketplaces of developing countries.</li>
+
+        <li>If the textiles do not sell, they are disposed of. They may be formally landfilled or incinerated, but even
+          wealthy countries generally lack sufficient facilities to formally landfill the huge quantities of used
+          textiles that they
+          export.
+          <br>
+          <br>
+          This means that developing countries tend to bear the brunt of the final disposal of textiles in the global
+          system -- they must find
+          a way to dispose of
+          mass quantities of worn textiles exported to them, and this often means informal/unregulated dumping.
+        </li>
+
+      </ul>
+
+      <p id="about-the-data">
+        The data shown in this visualization comes from the UN Comtrade database, and has been aggregated to include a
+        summary of information from the years
+        2018-2020,
+        where median weight in kilgrams > 20,000
+      </p>
+
+    </div>
+
+  </div>
+
+  <script src="patch.js"></script>
+  <script src="sketch.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
