@@ -1,0 +1,187 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: scroll; 
+  font-family: 'Courier New'; 
+  color: rgb(5, 0, 158); 
+  /* background-color:rgb(255, 225, 207); */
+}
+
+canvas {
+  display:flex;
+}
+
+#or {
+  font-weight: bolder; 
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.dropdown {
+  flex: 1;
+  margin-left: 5%;
+  margin-right:2%; 
+  padding-bottom:1%; 
+  color: rgb(5, 0, 158); 
+  border: 0.5px solid rgb(5, 0, 158);
+  border-radius: 2px;
+}
+
+h4 {
+  margin-left: 5%; 
+}
+
+.resetButton {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-right: 5%;
+}
+
+.aboutButton {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-right: 10%;
+}
+
+
+#header {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%; 
+  text-align: left;
+  font-size: 32px;
+  color: rgb(5, 0, 158); 
+  font-weight: bolder;
+}
+
+.typing-title {
+  overflow: hidden;
+  border-right: .20em solid #FF6A00;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: typing 3s steps(25, end) forwards;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+
+#about-head {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .2em;
+}
+
+#about-head::after {
+  content: "";
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  white-space: nowrap;
+  width: 0.15em;
+  height: 100%;
+  border-right: none;
+  letter-spacing: .15em;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    border-right: 0.15em solid #ff6a00;
+  }
+}
+
+#subhead {
+  margin-left:10%; 
+  margin-bottom: 5%; 
+  margin-right: 25%;
+  text-align: left;
+  font-size:18px;
+  font-weight: 500;
+  color: rgb(5, 0, 158);
+  line-height: 26px;
+  background-color:#ffffff; 
+  padding: 5%; 
+  border-left:0.15em solid #FF6A00;
+}
+
+.dropdown select {
+  font-family: 'Courier New'; 
+  font-size:16px;
+  font-weight: 500;
+  color: rgb(5, 0, 158); 
+  border: 0.5px solid rgb(5, 0, 158);
+  border-radius: 2px;
+}
+
+#label {
+  margin-left:5%;
+  font-size:16px;
+  color: rgb(5, 0, 158); 
+}
+
+#key {
+  color: rgb(5, 0, 158); 
+}
+
+#key.head {
+  margin-left: 5%;
+}
+
+img {
+  position: relative; 
+  top: 8px; 
+  max-width: 8%;
+}
+
+#reset-filter {
+  font-size:16px;
+  font-weight: 500;
+  color: rgb(5, 0, 158); 
+  font-family: 'Courier New'; 
+  background-color: white; 
+  border: 0.5px solid rgb(5, 0, 158);
+  border-radius: 2px;
+}
+
+#reset-filter:hover {
+  background-color: rgba(5, 0, 158, 0.755); 
+  color: white; 
+  font-weight: 800;
+}
+
+#go-to-about {
+  font-size:16px;
+  font-weight: 500;
+  color: rgb(5, 0, 158); 
+  font-family: 'Courier New'; 
+  background-color: white; 
+  border: 0.5px solid rgb(5, 0, 158);
+  border-radius: 2px;
+  text-align: center;
+}
+
+#go-to-about:hover {
+  background-color: rgba(5, 0, 158, 0.755); 
+  color: white; 
+  font-weight: 800;
+}
+
+#about-the-data {
+  font-style: italic;
+}
