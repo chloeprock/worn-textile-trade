@@ -136,8 +136,11 @@ function setupData() {
   
   if (tableData && rows) {
     for (let currentRow of rowsDisplay) {
-      console.log("hello"); 
+      //console.log("hello"); 
       weight = currentRow.getNum("WeightKG");
+
+      //console.log(weight); 
+
       importer = currentRow.getString("Importer");
       exporter = currentRow.getString("Exporter");
       valPer = currentRow.getString("ValPerKG");
@@ -147,7 +150,7 @@ function setupData() {
       amplitude = 30;
       frequency = 0.4;
 
-      patches.push(new Patch(x, rw, y, rh, importer, exporter, margin, translateX, translateY, valPer, amplitude, frequency, threadSpace));
+      patches.push(new Patch(x, rw, y, rh, importer, exporter, margin, translateX, translateY, valPer, amplitude, frequency, threadSpace, weight));
 
       if (y + rh + margin >= windowHeight * 3.8 - rh - 100) {
         x += rw + margin;
