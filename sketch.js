@@ -98,8 +98,12 @@ function filterRows2(exp) {
 function updateDropdownImport() {
   let dropdown = select("#dropdownImport");
   rowsDisplay = filterRows(dropdown.value());
+
   //console.log(patch); 
   setupData(); 
+
+  //reset Export field 
+  document.getElementById("dropdownExport").selectedIndex = 0;
 }
 
 function updateDropdownExport() {
@@ -107,7 +111,11 @@ function updateDropdownExport() {
   rowsDisplay = filterRows2(dropdown.value());
   //console.log(patch); 
   setupData(); 
+
+  //reset Import field 
+  document.getElementById("dropdownImport").selectedIndex = 0;
 }
+
 
 function clearFilter() {
   return tableData.getRows();
