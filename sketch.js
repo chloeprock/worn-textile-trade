@@ -49,13 +49,15 @@ function draw() {
   //text(patches.length, 100, 100); 
   translate(translateX, translateY);
 
-  for (let i = 0; i < 30; i++) {
+  for (let i = 0; i < 10000; i++) { // i < xx controls the speed at which patches load on the screen. 
+    //set to 30 to have an animation effect 
 
     if (count < patches.length) {
       patches[count].visible = true;
       count++;
     }
   }
+
 
   for (let patch of patches) {
     if (patch.visible) {
