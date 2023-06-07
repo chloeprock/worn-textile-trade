@@ -1,5 +1,5 @@
 class Patch {
-    constructor(x, rw, y, rh, importer, exporter, margin, translateX, translateY, valPer, amplitude, frequency, threadSpace) {
+    constructor(x, rw, y, rh, importer, exporter, margin, translateX, translateY, valPer, amplitude, frequency, threadSpace, weight) {
         this.visible = false; 
         this.x = x;
         this.rw = rw;
@@ -14,6 +14,7 @@ class Patch {
         this.amplitude = amplitude;
         this.frequency = frequency; 
         this.threadSpace = threadSpace; 
+        this.weight = weight; 
     }
 
     //draw the patches with hover function 
@@ -128,6 +129,7 @@ class Patch {
         let margin = this.margin;
         let translateX = this.translateX;
         let translateY = this.translateY;
+        let weight = this.weight; 
 
         noStroke();
         if ((mouseX > (x + translateX)) && (mouseX < (x + translateX + (rw))) && (mouseY > y + translateY) && (mouseY < (y + translateY + rh))) {
@@ -141,7 +143,10 @@ class Patch {
             let textLines = [];
 
             // Split the text into an array of words
-            let words = (importer + " imported " + weight.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 }) + " kgs from " + exporter).split(" ");
+            //let words = (importer + " imported " + weight.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 }) + " kgs from " + exporter).split(" ");
+
+            let words = (importer + " imported " + weight.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 }) + " kgs from " + exporter).split(" ");
+
 
             // Start with an empty line
             let line = "";
